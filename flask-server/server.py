@@ -11,10 +11,10 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @app.route("/example")
 @cross_origin()
 def example_data():
-    return {"data":["dataset1","dataset2","dataset_n"]}
+    return {"set":["dataset1","dataset2","dataset_n"]}
 
 #################
 
 if __name__ == "__main__":
     
-    app.run(host='0.0.0.0')
+    app.run()

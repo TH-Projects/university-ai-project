@@ -6,7 +6,7 @@ import Attendance from "./pages/attendance";
 const App = () => {
 
   const [data, setData] = useState([{}])
-  const [content, setContent] = useState('bookng')
+  const [content, setContent] = useState('booking')
 
   useEffect(() =>{
     fetch("http://localhost:5000/example").then(
@@ -33,20 +33,22 @@ const App = () => {
   }
 
   return(
-    <header>
-      <h1>test</h1>
-      <nav>
-        <ul>
-          <li><a>Labor buchen</a></li>
-          <li><a>Anwesenheiten</a></li>
+    <>
+      <header id="app_header">
+      <h1 id="app_headline">test</h1>
+      <nav id="app_nav">
+        <ul id="app_nav_list">
+          <li id="app_nav_item_one"><a id="app_nav_item_one_link">Labor buchen</a></li>
+          <li id="app_nav_item_two"><a id="app_nav_item_two_link">Anwesenheiten</a></li>
         </ul>
-      </nav>
-      <main>
-        {
-          showPage()
-        }    
-      </main>
+      </nav>  
     </header>
+    <main id="app_main">
+    {
+      showPage()
+    }    
+    </main>
+    </>
   )
 }
 
